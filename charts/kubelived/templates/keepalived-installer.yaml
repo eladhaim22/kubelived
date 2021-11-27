@@ -60,7 +60,7 @@ spec:
       volumes:
       - name: manifest
         hostPath:
-          path: /etc/kubernetes/manifests
+          path: {{ .Values.installer.kubernetesManifestsPath }}
       - name: config
         hostPath:
           path: {{ .Values.keepalived.config_path }}
